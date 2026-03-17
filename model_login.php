@@ -1,4 +1,4 @@
-<?php 
+<?php require_once "handy_methods.php";
 
 // login handling with diagnostics
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

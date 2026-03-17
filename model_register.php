@@ -1,4 +1,4 @@
-<?php include "handy_methods.php"
+<?php include "handy_methods.php";
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = test_input($_POST['username'] ?? '');
