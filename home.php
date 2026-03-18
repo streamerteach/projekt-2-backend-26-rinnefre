@@ -1,7 +1,4 @@
-<?php 
-require_once "handy_methods.php" 
-
-?>
+<?php include "handy_methods.php" ?>
 <!DOCTYPE html>
 
 <head>
@@ -9,7 +6,7 @@ require_once "handy_methods.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dennis Dejtar</title>
     <link rel="stylesheet" href="./style.css">
-    
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -19,10 +16,8 @@ require_once "handy_methods.php"
         <section>
 
             <article>
-                <h2>logga in eller registrera dig</h2>
-                <?php include "view_login.php" ?>
-
-                <?php include "view_register.php" ?>
+                <h2>Välkommen till Min dejt site!</h2>
+                
             </article>
 
         </section>

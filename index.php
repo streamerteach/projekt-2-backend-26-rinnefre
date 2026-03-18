@@ -18,6 +18,20 @@
             <article>
                 <h2>Välkommen till Min dejt site!</h2>
                 <?php include "./view_profiles.php" ?>
+
+
+
+                <?php 
+                echo "<div class='profile-card'>";
+                echo "<h3>" . htmlspecialchars($p['username']) . "</h3>";
+                echo "<p>Gilla-markeringar: <span id='like-count-{$p['id']}'>{$p['likes']}</span></p>";
+
+                if (isset($_SESSION['user_id'])) {
+                    echo "<button onclick='handleLike({$p['id']}, \"like\")'>👍 Gilla</button>";
+                        echo "<button onclick='handleLike({$p['id']}, \"dislike\")'>👎 Ta bort gilla</button>";
+                    }
+                    echo "</div>";
+                ?>
             </article>
 
         </section>
@@ -28,6 +42,25 @@
         </footer>
 
     </div>
+
+    <script>
+    function handleLike(profileId, action) {
+    const formData = new FormData();
+    formData.append('profile_id', profileId);
+    formData.append('action', action);
+
+    fetch('like.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(newCount => {
+        // Uppdatera siffran på skärmen direkt utan reload!
+        document.getElementById('like-count-' + profileId).innerText = newCount;
+    })
+    .catch(error => console.error('Error:', error));
+}
+</script>
 </body>
 
 </html>

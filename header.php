@@ -6,11 +6,11 @@
     <nav>
         <!-- Huvudmenyn -->
         <ul>
-            <li><a href="../home/">Home</a></li>
-            <li><a href="../projekt1/">Projekt 1</a></li>
-            <li><a href="../projekt2/">Projekt 2</a></li>
+            <li><a href="./home.php">Home</a></li>
+          <!--  <li><a href="../projekt1/">Projekt 1</a></li>
+            <li><a href="../projekt2/">Projekt 2</a></li> -->
             <li><a href="./login.php">Logga in</a></li>
-            <li><a href="../rapport/">Rapport</a></li>
+            <li><a href="./webbraport.php">Rapport</a></li>
             <?php
             // Hälsa på återkommande användare
             if (isset($_SESSION['username'])) {

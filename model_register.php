@@ -2,11 +2,11 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = test_input($_POST['username'] ?? '');
-        $password = test_input($_POST['password'] ?? '');
+        $passhash = test_input($_POST['passhash'] ?? '');
         
-        if ($username !== '' && $password !== '') {
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO profiles (username, password) VALUES (?, ?)";
+        if ($username !== '' && $passhash !== '') {
+            $hashed_password = password_hash($passhash, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO profiles (username, passhash) VALUES (?, ?)";
             $stmt = $conn->prepare($sql);
             try {
                 $stmt->execute([$username, $hashed_password]);

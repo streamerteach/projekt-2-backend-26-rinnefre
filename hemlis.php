@@ -1,1 +1,1 @@
-<?php $password = "seQU6FFXbt";
+<?php $db_password = "seQU6FFXbt";
