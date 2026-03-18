@@ -1,7 +1,7 @@
 <header>
     <!-- Logo och meny i headern -->
     <img src="../media/logo.svg" alt="Website logo" />
-    <div id="logo">DenApp</div>
+    <div id="logo">Start Dating</div>
 
     <nav>
         <!-- Huvudmenyn -->

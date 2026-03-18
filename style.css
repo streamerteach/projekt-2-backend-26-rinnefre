@@ -2,7 +2,7 @@
 
 /* Sidhuvudet logo, firmanamn och nav */
 header {
-    background-color: #1abc9c;
+    background-color: #1a60bc;
     display: flex;  /* logon och nav är flex items */
     align-items: center;
 }
@@ -61,7 +61,7 @@ article {
 
 /* Footer */
 footer {
-    background-color: #1abc9c;
+    background-color: #1a60bc;
     color: #fff;
     position: fixed;
     bottom: 0px;
